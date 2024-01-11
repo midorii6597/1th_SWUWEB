@@ -1,0 +1,29 @@
+<!-- views/subclub.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=userid.username %>님의 Subclub 참여 목록</title>
+</head>
+<body>
+
+  <h1>님의 Subclub 참여 목록</h1>
+
+  <% if (subclublist && subclublist.length > 0) { %>
+    <ul>
+      <% subclublist.forEach(subclub => { %>
+        <li>
+          <p><strong>Subclub:</strong> <%= subclub.subclubname %></p>
+          <!-- 기타 Subclub 정보를 표시할 수 있습니다. -->
+        </li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>참여 중인 Subclub이 없습니다.</p>
+  <% } %>
+
+</body>
+</html>
