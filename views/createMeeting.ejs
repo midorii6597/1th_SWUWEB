@@ -1,0 +1,14 @@
+<!-- views/createMeeting.ejs -->
+<h2>모임 생성</h2>
+<form action="/meetings/create" method="post">
+  <label for="name">모임 이름:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="description">모임 설명:</label>
+  <textarea id="description" name="description" required></textarea>
+
+  <label for="code">모임 코드:</label>
+  <input type="text" id="code" name="code" required>
+
+  <button type="submit">완료</button>
+</form>
